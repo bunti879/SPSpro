@@ -47,7 +47,7 @@ def index():
         player_choice = request.form["choice"]
         computer_choice = random.choice(["Stone", "Paper", "Scissors"])
 
-        # Determine result
+        # Determine result and save in csv
         if player_choice == computer_choice:
             result = "Draw"
         elif (player_choice == "Stone" and computer_choice == "Scissors") or \
@@ -65,3 +65,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
